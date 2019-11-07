@@ -42,6 +42,7 @@ namespace PhoneBook
         {
             Dictionary<string, int[]> phoneBook = ReadPhoneBookFromFile("PhoneBook.txt");
             PrintPhonesBySameFirstLetter(phoneBook);
+            Console.ReadKey();
         }
 
         static Dictionary<string, int[]> ReadPhoneBookFromFile(string filePath)
@@ -135,8 +136,6 @@ namespace PhoneBook
                     Console.WriteLine();
                 }
             }         
-            Console.ReadKey();
         }
-
     }
 }
