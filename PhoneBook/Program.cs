@@ -40,8 +40,8 @@ namespace PhoneBook
     {
         static void Main(string[] args)
         {
-            Dictionary<string, int[]> PhoneBook = ReadPhoneBookFromFile("PhoneBook.txt");
-            PrintPhonesBySameFirstLetter(PhoneBook);
+            Dictionary<string, int[]> phoneBook = ReadPhoneBookFromFile("PhoneBook.txt");
+            PrintPhonesBySameFirstLetter(phoneBook);
         }
 
         static Dictionary<string, int[]> ReadPhoneBookFromFile(string filePath)
