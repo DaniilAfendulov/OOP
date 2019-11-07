@@ -16,6 +16,7 @@ namespace Task2
             string text = ReadText(new StreamReader("TextFile.txt"));
             Dictionary<char, uint> charactersDictionary = CalculateAmountOfCharacters(text);
             PrintAmountOfCharacters(charactersDictionary);
+            Console.ReadKey();
         }
 
         static string ReadText(StreamReader reader)
@@ -46,7 +47,6 @@ namespace Task2
             char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower().ToCharArray();
             foreach (var character in alphabet)
                 Console.WriteLine("{0} : {1}", character, charactersDictionary[character]);
-            Console.ReadKey();
         }
 
 
