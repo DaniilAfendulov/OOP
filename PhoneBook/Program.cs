@@ -55,7 +55,7 @@ namespace PhoneBook
                     while ((char)file.Peek() == ' ') file.Read();
                     string name = ReadNameFromFile(file);
                     int[] phoneNumber = ReadNumberFromFile(file);
-                    if (IsValid(name, phoneNumber)) phoneBook.Add(name, phoneNumber);
+                    if (IsValid(name) && IsValid(phoneNumber)) phoneBook.Add(name, phoneNumber);
                 }
             }
             return phoneBook;
@@ -90,9 +90,14 @@ namespace PhoneBook
             }
             return oldString;
         }
-        static bool IsValid(string name, int[] phoneNumber)
+        static bool IsValid(string name)
         {
             if (String.IsNullOrEmpty(name)) return false;
+            return true;
+        }
+        
+        static bool IsValid(int[] phoneNumber)
+        {
             if (phoneNumber == null) return false;
             return true;
         }
